@@ -1,7 +1,5 @@
 .test-template {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: sans-serif;
   max-width: 1000px;
   margin: 0 auto;
   padding: 100px;
@@ -10,12 +8,14 @@
     font-size: 48px;
     font-weight: 700;
     color: red;
+    margin-bottom: 40px;
   }
 
   .subtitle {
     font-size: 24px;
     font-weight: 700;
     color: green;
+    margin-bottom: 40px;
   }
 
   .summary {

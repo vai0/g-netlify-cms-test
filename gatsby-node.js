@@ -1,7 +1,36 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  const testTemplate = path.resolve(
+    `${__dirname}/src/components/templates/TestTemplate.js`
+  )
+
+  return graphql(
+    `
+      {
+        allTestTemplateYaml {
+          edges {
+            node {
+              name
+              slug
+              title
+              subtitle
+              summary
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    result.data.allTestTemplateYaml.edges.forEach(({ node }) => {
+      createPage({
+        path: `${node.slug}`,
+        component: testTemplate,
+        context: {
+          ...node,
+        },
+      })
+    })
+  })
+}

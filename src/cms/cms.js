@@ -1,7 +1,7 @@
 import CMS from "netlify-cms-app"
 
-import TestTemplate from "../components/templates/TestTemplate"
+import TestTemplatePreview from "./preview-templates/TestTemplatePreview"
 
-CMS.registerPreviewTemplate("test_template", TestTemplate)
+CMS.registerPreviewTemplate("test_template", TestTemplatePreview)
 
 CMS.init()

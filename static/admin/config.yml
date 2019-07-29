@@ -1,0 +1,23 @@
+collections:
+  - label: test template
+    name: test_template
+    extension: yml
+    folder: "src/content/test-template"
+    create: true
+    fields:
+      - label: title
+        name: title
+        widget: string
+      - label: subtitle
+        name: subtitle
+        widget: string
+      - label: summary
+        name: summary
+        widget: string
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+backend:
+  name: github
+  repo: vai0/g-netlify-cms-test

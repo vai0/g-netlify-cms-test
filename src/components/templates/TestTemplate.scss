@@ -1,0 +1,25 @@
+.test-template {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px;
+
+  .title {
+    font-size: 48px;
+    font-weight: 700;
+    color: red;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: green;
+  }
+
+  .summary {
+    font-size: 16px;
+    color: rebeccapurple;
+  }
+}

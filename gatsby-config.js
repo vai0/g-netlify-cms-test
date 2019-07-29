@@ -5,12 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        includePaths: [`${__dirname}/src`],
-      },
-    },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-yaml`,
     `gatsby-plugin-react-helmet`,
     {
